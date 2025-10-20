@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'src/core/di/injection.dart';
 import 'src/presentation/pages/home_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Load environment variables
+  await dotenv.load(fileName: ".env");
+
   configureDependencies();
   runApp(const ProviderScope(child: MyApp()));
 }

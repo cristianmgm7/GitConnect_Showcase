@@ -16,7 +16,6 @@ class User with _$User {
     int? following,
   }) = _User;
 
-  factory User.fromJson(Map<String, dynamic> json) {
-    return _$UserFromJson(json);
-  }
+  factory User.fromJson(Map<String, dynamic> json) =>
+      _$UserFromJson(json);
 }

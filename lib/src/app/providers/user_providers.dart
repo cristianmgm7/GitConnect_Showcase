@@ -1,4 +1,4 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import '../../core/di/injection.dart';
 import '../../domain/models/user.dart';
 import '../../domain/repositories/user_repository.dart';
